@@ -33,6 +33,9 @@ popd
 #=================================================
 # SYSTEM CONFIGURATION
 #=================================================
+
+chown -R $app:www-data "$install_dir/files"
+
 ynh_script_progression --message="Adding system configurations related to $app..." --weight=1
 
 # Create a dedicated PHP-FPM config
