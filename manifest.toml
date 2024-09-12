@@ -16,7 +16,8 @@ admindoc = "https://glpi-install.readthedocs.io/en/latest/"
 code = "https://github.com/glpi-project/glpi"
 
 [integration]
-yunohost = ">= 11.2"
+yunohost = ">= 11.2.30"
+helpers_version = "2.1"
 architectures = "all"
 multi_instance = true
 
@@ -51,6 +52,7 @@ ram.runtime = "50M"
     [resources.system_user]
 
     [resources.install_dir]
+    group = "www-data:r-x"
 
     [resources.permissions]
     main.url = "/"
@@ -58,19 +60,19 @@ ram.runtime = "50M"
     [resources.apt]
     packages = [
         "mariadb-server",
-        "php8.2-cli",
-        "php8.2-curl",
-        "php8.2-fileinfo",
-        "php8.2-gd",
-        "php8.2-mbstring",
-        "php8.2-mysqli",
-        "php8.2-simplexml",
-        "php8.2-xml",
-        "php8.2-intl",
-        "php8.2-ldap",
-        "php8.2-xmlrpc",
-        "php8.2-bz2",
-        "php8.2-zip",
+        "php8.3-cli",
+        "php8.3-curl",
+        "php8.3-fileinfo",
+        "php8.3-gd",
+        "php8.3-mbstring",
+        "php8.3-mysqli",
+        "php8.3-simplexml",
+        "php8.3-xml",
+        "php8.3-intl",
+        "php8.3-ldap",
+        "php8.3-xmlrpc",
+        "php8.3-bz2",
+        "php8.3-zip",
     ]
 
     [resources.database]
